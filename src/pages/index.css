@@ -1,65 +1,155 @@
-body {
+body, html {
     margin: 0;
+    padding: 0;
     font-family: 'Arial', sans-serif;
-    background-color: #f5f5f5;
+    background: linear-gradient(135deg, #f5f5f5, #e0d7f5);
     color: #333;
   }
   
+  /* Hamburger menu */
+  .hamburger {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 220px;
+    height: 100%;
+    background-color: #663399;
+    color: white;
+    padding: 2rem 1rem;
+    transition: left 0.3s;
+    z-index: 1000;
+  }
+  
+  .sidebar.open {
+    left: 0;
+  }
+  
+  .sidebar .close-btn {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 2rem;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebar li {
+    margin: 1rem 0;
+  }
+  
+  .sidebar a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+  }
+  
+  .sidebar a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Main content */
   .container {
     max-width: 900px;
     margin: 0 auto;
     padding: 2rem;
+    text-align: center;
   }
   
   .header {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin-bottom: 3rem;
   }
   
   .profile-pic {
-    width: 150px;
-    height: 150px;
+    width: 180px;
+    height: 180px;
     border-radius: 50%;
     object-fit: cover;
-    margin-bottom: 1rem;
     border: 4px solid #663399;
-  }
-  
-  h1 {
-    font-size: 2.5rem;
-    color: #663399;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     margin-bottom: 1rem;
   }
   
-  p {
+  .description {
     font-size: 1.2rem;
     max-width: 600px;
-    margin: 0 auto;
     line-height: 1.6;
   }
   
   h2 {
     color: #663399;
     margin-bottom: 1rem;
+    border-bottom: 2px solid #663399;
+    display: inline-block;
+    padding-bottom: 0.2rem;
   }
   
-  ul {
-    list-style-type: none;
+  .projects, .links {
+    margin-bottom: 2.5rem;
+  }
+  
+  .project-item {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .project-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  }
+  
+  .links-list {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
     padding: 0;
+    list-style: none;
   }
   
-  ul li {
-    margin-bottom: 0.8rem;
-  }
-  
-  a {
+  .links-list a {
     color: #0077b5;
+    font-weight: bold;
     text-decoration: none;
-    transition: color 0.2s ease-in-out;
+    transition: color 0.3s, transform 0.2s;
   }
   
-  a:hover {
+  .links-list a:hover {
     color: #005582;
-    text-decoration: underline;
+    transform: scale(1.05);
+  }
+  /* Remove bullets for all lists */
+ul {
+    list-style: none; /* no bullets */
+    padding: 0;       /* remove default padding */
+    margin: 0;        /* remove default margin */
+  }
+  
+  /* If you want, target projects only */
+  .projects ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
   }
   
