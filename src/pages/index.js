@@ -26,7 +26,7 @@ const IndexPage = () => {
             <img src='/images/profile.JPEG' alt="Mrinalini" className="profile-pic" />
             <h1>Hi, I am Mrinalini</h1>
             <p className="description">
-              I’m a sofwtare engineer passionate about full stack development,
+              I’m a software engineer passionate about full stack development,
               distributed systems, and building scalable apps. I love working
               with Java, Spring Boot, React, and databases like PostgreSQL,
               MongoDB, and MySQL.
