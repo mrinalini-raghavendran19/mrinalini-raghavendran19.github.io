@@ -1,29 +1,40 @@
 import * as React from "react"
+import "./index.css"
 
 const IndexPage = () => {
   return (
-    <main style={{ fontFamily: "Arial, sans-serif", padding: "2rem" }}>
-      <h1 style={{ fontSize: "2.5rem", color: "#663399" }}>
-        Hi, I’m Mrinalini 👋
-      </h1>
-      <p style={{ fontSize: "1.2rem", maxWidth: "600px" }}>
-        I’m a software engineer passionate about backend development,
-        distributed systems, and building scalable apps. I love working with
-        Java, Spring Boot, React, and databases like PostgreSQL and DynamoDB.
-      </p>
+    <main className="container">
+      <header className="header">
+        <img src= "profile.JPEG" alt="Mrinalini" className="profile-pic" />
+        <h1>Hi, I’m Mrinalini 👋</h1>
+        <p>
+          I’m a software engineer passionate about full stack development,
+          distributed systems, and building scalable apps. I love working with
+          Java, Spring Boot, React, and databases like PostgreSQL, MongoDB and MySQL.
+        </p>
+      </header>
 
-      <h2>Projects 🚀</h2>
-      <ul>
-        <li><strong>Distributed Task Scheduler</strong> – A system for scheduling tasks with intelligent prioritization.</li>
-        <li><strong>Journaling Web App</strong> – Distraction-free journaling app with AI-powered sentiment analysis.</li>
-        <li><strong>Leaderboard Feature</strong> – Built for an NGO platform to track volunteer hours.</li>
-      </ul>
+      <section className="projects">
+        <h2>Projects 🚀</h2>
+        <ul>
+          <li>
+            <strong>Journaling Web App</strong> – Distraction-free journaling app
+            with AI-powered sentiment analysis.
+          </li>
+        </ul>
+      </section>
 
-      <h2>Find me online 🌐</h2>
-      <ul>
-        <li><a href="https://github.com/mrinalini" target="_blank" rel="noreferrer">GitHub</a></li>
-        <li><a href="https://linkedin.com/in/mrinalini" target="_blank" rel="noreferrer">LinkedIn</a></li>
-      </ul>
+      <section className="links">
+        <h2>Find me online 🌐</h2>
+        <ul>
+          <li>
+            <a href="https://github.com/mrinalini-raghavendran19" target="_blank" rel="noreferrer">GitHub</a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/mrinalini-raghavendran-781428222/" target="_blank" rel="noreferrer">LinkedIn</a>
+          </li>
+        </ul>
+      </section>
     </main>
   )
 }
